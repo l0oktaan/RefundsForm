@@ -18,7 +18,7 @@
                         <transition name="bounce">
                         <div v-if="!isFirst">
                             <p class="text-center">กรมควบคุมมลพิษ</p>
-                            <button type="button" class="btn btn-primary btn-block" @click="isFirst=true">ยืนยันข้อมูล</button>
+                            <button type="button" class="btn btn-primary btn-block" @click="toIndex()">ยืนยันข้อมูล</button>
                         </div>
                         </transition>
                     </b-card> 
@@ -35,6 +35,12 @@ export default {
     data(){
         return{
             isFirst: true
+        }
+    },
+    methods: {
+        toIndex(){
+            this.isFirst = false;
+            this.$router.push('index');
         }
     }
 }
@@ -58,12 +64,8 @@ export default {
     box-shadow: 0px 0px 20px -2px rgba(11, 36, 59, 0.75);
     
 }
-.logo{
-    max-width: 150px;
-}
-.title{
-    font-size: 1.2em;
-}
+
+
 #budgetid{
     width: 450px;
 }

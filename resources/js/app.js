@@ -9,6 +9,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import ToggleButton from 'vue-js-toggle-button'
+Vue.use(ToggleButton)
+
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
@@ -33,6 +36,10 @@ Vue.use(Vuex)
 
 import App from './views/App'
 import Home from './views/Home'
+import Index from './views/Index'
+import Menu from './views/index/Menu'
+import Add from './views/index/Add'
+import List from './views/index/List'
 const router = new VueRouter({
     mode: 'history',
     base: '/',
@@ -40,7 +47,29 @@ const router = new VueRouter({
         {
             path: '/',
             component: Home          
-        },        
+        },
+        {
+            path: '/index',
+            component: Index,
+            mode: 'history',
+            children: [
+                {
+                    path: '',
+                    name: 'menu',
+                    component: Menu
+                },
+                {
+                    path: '/index/add',
+                    name: 'add',
+                    component: Add
+                },
+                {
+                    path: '/index/list',
+                    name: 'list',
+                    component: List
+                }
+            ]
+        }      
     ]
 });
 

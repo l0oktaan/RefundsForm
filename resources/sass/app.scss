@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Trirong');
 
 // Variables
 @import 'variables';
@@ -28,4 +28,11 @@
   100% {
     transform: scale(1);
   }
+}
+
+.logo{
+  max-width: 150px;
+}
+.title{
+  font-size: 1.2em;
 }
