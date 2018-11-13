@@ -16,23 +16,39 @@
   animation: bounce-in 1s;
 }
 .bounce-leave-active {
-  animation: bounce-in .01s;
+  animation: bounce-out 1s;
 }
 @keyframes bounce-in {
   0% {
     transform: scale(0);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
   }
 }
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
 
+ 50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .logo{
   max-width: 150px;
 }
 .title{
+  font-size: 1.2em;
+}
+//Vue Toggle Button
+.v-switch-label{
+  line-height: 35px!important;
   font-size: 1.2em;
 }

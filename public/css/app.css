@@ -10478,8 +10478,8 @@ a.text-dark:focus {
 }
 
 .bounce-leave-active {
-  -webkit-animation: bounce-in .01s;
-          animation: bounce-in .01s;
+  -webkit-animation: bounce-out 1s;
+          animation: bounce-out 1s;
 }
 
 @-webkit-keyframes bounce-in {
@@ -10489,8 +10489,8 @@ a.text-dark:focus {
   }
 
   50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 
   100% {
@@ -10506,8 +10506,8 @@ a.text-dark:focus {
   }
 
   50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 
   100% {
@@ -10516,11 +10516,50 @@ a.text-dark:focus {
   }
 }
 
+@-webkit-keyframes bounce-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes bounce-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
 .logo {
   max-width: 150px;
 }
 
 .title {
+  font-size: 1.2em;
+}
+
+.v-switch-label {
+  line-height: 35px !important;
   font-size: 1.2em;
 }
 
