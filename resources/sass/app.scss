@@ -16,7 +16,7 @@
   animation: bounce-in 1s;
 }
 .bounce-leave-active {
-  animation: bounce-out 1s;
+  animation: bounce-out 0.5s;
 }
 @keyframes bounce-in {
   0% {

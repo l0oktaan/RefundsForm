@@ -10478,8 +10478,8 @@ a.text-dark:focus {
 }
 
 .bounce-leave-active {
-  -webkit-animation: bounce-out 1s;
-          animation: bounce-out 1s;
+  -webkit-animation: bounce-out 0.5s;
+          animation: bounce-out 0.5s;
 }
 
 @-webkit-keyframes bounce-in {

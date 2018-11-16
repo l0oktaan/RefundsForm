@@ -29,7 +29,7 @@
                             <span class='close' @click="removeForm(form)"><i class="fas fa-times"></i></span>
                             <div class="menuEdit" @click="showForm(form)"><i class="fas fa-edit"></i>กรอกแบบฟอร์ม</div>
                         </div>
-                        <form-refund :formID="form.id" :show="form.show"></form-refund>
+                        <form-refund :form="form" :show="form.show"></form-refund>
                     </div>
                     
                 </transition-group>
@@ -133,7 +133,7 @@ export default {
 
             this.$swal({
                 title: "คุณต้องการลบแบบฟอร์มนี้ออกใช่หรือไม่ ?",
-                text: "หากคุณตอบตกลง ข้อมูลที่บันทึกไว้จะถูกลบไปด้วย",
+                text: "หากคุณยืนยัน ข้อมูลที่บันทึกไว้จะถูกลบไปด้วย",
                 icon: "warning",
                 buttons : ["ยกเลิก", "ยืนยัน"],
                 dangerMode: true
@@ -147,7 +147,6 @@ export default {
                     this.arrFormSelected[indexRemove] = false;
                     this.clearShowForm();
                 }
-                
             });
             
         },

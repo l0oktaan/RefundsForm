@@ -31523,7 +31523,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     }]
 });
 
-Vue.component('FormRefund', __webpack_require__(253));
+Vue.component('FormRefund', __webpack_require__(247));
 
 var app = new Vue({
     el: '#app',
@@ -69475,7 +69475,7 @@ var render = function() {
                         _vm._v("การถอนคืนเงินรายได้แผ่นดิน")
                       ]),
                       _vm._v(" "),
-                      _c("transition", { attrs: { name: "bounce" } }, [
+                      _c("transition", { attrs: { name: "fade" } }, [
                         _vm.isFirst
                           ? _c("div", [
                               _c("div", { staticClass: "input-group mb-3" }, [
@@ -69505,7 +69505,7 @@ var render = function() {
                           : _vm._e()
                       ]),
                       _vm._v(" "),
-                      _c("transition", { attrs: { name: "bounce" } }, [
+                      _c("transition", { attrs: { name: "fade" } }, [
                         !_vm.isFirst
                           ? _c("div", [
                               _c("p", { staticClass: "text-center" }, [
@@ -70203,7 +70203,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             this.$swal({
                 title: "คุณต้องการลบแบบฟอร์มนี้ออกใช่หรือไม่ ?",
-                text: "หากคุณตอบตกลง ข้อมูลที่บันทึกไว้จะถูกลบไปด้วย",
+                text: "หากคุณยืนยัน ข้อมูลที่บันทึกไว้จะถูกลบไปด้วย",
                 icon: "warning",
                 buttons: ["ยกเลิก", "ยืนยัน"],
                 dangerMode: true
@@ -70369,7 +70369,7 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("form-refund", {
-                            attrs: { formID: form.id, show: form.show }
+                            attrs: { form: form, show: form.show }
                           })
                         ],
                         1
@@ -70473,26 +70473,15 @@ if (false) {
 }
 
 /***/ }),
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 251 */,
-/* 252 */,
-/* 253 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(14)
 /* script */
-var __vue_script__ = __webpack_require__(255)
+var __vue_script__ = __webpack_require__(248)
 /* template */
-var __vue_template__ = __webpack_require__(254)
+var __vue_template__ = __webpack_require__(249)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -70531,16 +70520,64 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 254 */
+/* 248 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['form', 'show'],
+    data: function data() {
+        return {
+            rules: [{
+                id: 1,
+                form_id: 1,
+                order: 1,
+                name: 'เป็นการให้ความช่วยเหลือผู้ประกอบการก่อสร้างในภาคใต้ที่ได้รับผลกระทบจากเหตุอุทกภัยที่เกิดขึ้นในช่วงระหว่างวันที่ 1 ธ.ค. 59 ถึงวันที่ 12 ก.พ. 60',
+                consider: 'เป็นสัญญาจ้างก่อสร้าง'
+            }, {
+                id: 2,
+                form_id: 1,
+                order: 2,
+                name: 'อยู่ในพื้นที่ภาคใต้ 2 จังหวัด ได้แก่ พังงา และภูเก็ต',
+                consider: 'อยู่ในภาคใต้ 2 จังหวัด'
+            }, {
+                id: 3,
+                form_id: 1,
+                order: 3.1,
+                name: 'ลงนามก่อน 1 ธ.ค. 59',
+                consider: 'ลงนามก่อน 1 ธ.ค. 59'
+            }, {
+                id: 4,
+                form_id: 1,
+                order: 3.2,
+                name: 'ลงนามระหว่าง 1 ธ.ค. 59 - 12 ก.พ. 60',
+                consider: 'ลงนามระหว่าง 1 ธ.ค. 59 - 12 ก.พ. 60'
+            }]
+        };
+    }
+});
+
+/***/ }),
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.show
-    ? _c("h3", [_vm._v("Refund Form : " + _vm._s(_vm.formID))])
-    : _vm._e()
+  return _c("div", [
+    _vm.show
+      ? _c("h3", [_vm._v("Refund Form : " + _vm._s(_vm.form.id))])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -70553,18 +70590,10 @@ if (false) {
 }
 
 /***/ }),
-/* 255 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 250 */
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['formID', 'show']
-});
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

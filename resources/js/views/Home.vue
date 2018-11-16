@@ -7,7 +7,7 @@
                     <b-card bg-variant="light text-center">
                         <p class="card-text"><b-img class="logo" src="/img/cgd_blue.png" fluid /></p>
                         <p class="card-text title">การถอนคืนเงินรายได้แผ่นดิน</p>
-                        <transition name="bounce">
+                        <transition name="fade">
                         <div v-if="isFirst">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control text-center" placeholder="เลขรหัสงบประมาณ">                    
@@ -15,7 +15,7 @@
                             <button type="button" class="btn btn-primary btn-block" @click="isFirst=false">ดำเนินการต่อ</button>
                         </div>
                         </transition>
-                        <transition name="bounce">
+                        <transition name="fade">
                         <div v-if="!isFirst">
                             <p class="text-center">กรมควบคุมมลพิษ</p>
                             <button type="button" class="btn btn-primary btn-block" @click="toIndex()">ยืนยันข้อมูล</button>
